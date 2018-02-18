@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+		<meta charset = "UTF-8">
+		<title>Firebase Chat</title>
+		<link rel = "icon" href = "data:;base64, iVBORw0KGgo=">
+		<link rel= "stylesheet" type="text/css" href="index.css">
+		<script>
+
+		</script>
+
+</head>
+
+
+
+<body>
+	<h1>My Firebase Chat</h1>
+
+	<button id="login">Login with Google</button><br/>
+	<input id = "username" type = "text" placeholder= "Name"><br/>
+	<input id = "post" type = "text" placeholder= "Post"><br/>
+	<button id = "postbtn" onclick="submit()">Post</button><br/>
+	<div id = "results"></div>
+	
+
+	<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyBTyTziwvxNZOmjt-1PUmQEYvgNX1UYGcE",
+	    authDomain: "techsupportwebchat.firebaseapp.com",
+	    databaseURL: "https://techsupportwebchat.firebaseio.com",
+	    projectId: "techsupportwebchat",
+	    storageBucket: "techsupportwebchat.appspot.com",
+	    messagingSenderId: "242321459064"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+ 	<script src = "index.js"></script>
+
+</body>
+</html>
+
+</html>
