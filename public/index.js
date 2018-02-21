@@ -49,41 +49,9 @@ function logout() {
     });
 }
 
-/** Function to add a listener for user auth **/
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    var displayName = user.displayName;
-    var email = user.email;
-    var emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
-    var isAnonymous = user.isAnonymous;
-    var uid = user.uid;
-    var providerData = user.providerData;
-    alert("Welcome " + email);
-    // ...
-    // Begin listening for data only if user is signed in
-    startListening();
-    
-  } else {
-    // User is signed out.
-    // ...
-    alert("Goodbye " + email);
-
-    //Delete conversation once user is logged out
-    var node = document.getElementById("results");
-    while (node.hasChildNodes()) {
-        node.removeChild(node.lastChild);
-    }
-  }
-});
-
-// Begin listening for data only if user is signed in
-// startListening();
-    
 /** Function to add a data listener **/
 var startListening = function() {
-  	firebaseRef.on('child_added', function(snapshot) {
+    firebaseRef.on('child_added', function(snapshot) {
     var msg = snapshot.val();
       
     var msgUsernameElement = document.createElement("b");
@@ -100,3 +68,34 @@ var startListening = function() {
     document.getElementById("results").appendChild(msgElement);
     });
 }
+
+/** Function to add a listener for user auth **/
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var displayName = user.displayName;
+    var email = user.email;
+    var emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+    alert("Welcome " + email);
+    // ...
+    startListening();
+  } else {
+    // User is signed out.
+    // ...
+    alert("Goodbye " + email);
+
+    var node = document.getElementById("results");
+    while (node.hasChildNodes()) {
+        node.removeChild(node.lastChild);
+    }
+    //Delete conversation once user is logged out
+    
+  }
+});
+
+// Begin listening for data only if user is signed in
+//   startListening();
