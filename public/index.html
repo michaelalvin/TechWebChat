@@ -17,7 +17,14 @@
 <body>
 	<h1>My Firebase Chat</h1>
 
-	<button id="login">Login with Google</button><br/>
+	<input id = "email" type = "text" placeholder= "Email"><br/>
+	<input id = "password" type = "text" placeholder= "Password"><br/>
+    <div id="element1"> <button id = "loginbtn" onclick="login()">Log In</button><br/> </div> 
+	<div id="element2"> <button id = "signupbtn" onclick="signup()">Sign Up</button><br> </div> 
+	<div id="element3"> <button id = "logoutbtn" onclick="logout()">Log Out</button><br/> </div> <br/>	
+
+
+
 	<input id = "username" type = "text" placeholder= "Name"><br/>
 	<input id = "post" type = "text" placeholder= "Post"><br/>
 	<button id = "postbtn" onclick="submit()">Post</button><br/>

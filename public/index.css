@@ -7,7 +7,8 @@
       width: 400px;
       background-color: #efefef;
     }
-    #username, #post {
+    #username, #post, #email, #password {
+      display: block;
       margin: 5px 0px;
     }
 
@@ -17,3 +18,23 @@
       border: none;
       color: #FFF;
     }
+
+    #loginbtn, #logoutbtn, #signupbtn {
+      padding: 0.5em 1em;
+      background-color: #ff6d4e;
+      border: none;
+      color: #FFF;
+      float: left;
+    }
+
+    #element1, #element2 {
+      display:inline-block;
+      margin-right:10px; 
+      width:150px
+    } 
+
+    #element3 {
+      display:inline-block; 
+      width:150px
+    } 
+    
