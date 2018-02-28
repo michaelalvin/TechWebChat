@@ -10,18 +10,7 @@ var emailaddress;
 
 /** Function to add a post to database **/
 function submit() {
-	var username = nameText.value;
-	var post = postText.value;
-
-    //var ref = firebaseRef.child("users/email");
-    //var newre2 = ref.push({username:username, text:post});
-
-    //Wait email address is ready then add to tree
-    waitForElement();
-}
-
-function waitForElement(){
-    if(typeof emailaddress !== "undefined"){
+	if(typeof emailaddress !== "undefined"){
         //variable exists, do what you want
         //replace @ and . because Firebase won't create child with those characters
         var directory = "users/" + emailaddress;
@@ -135,5 +124,3 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-// Begin listening for data only if user is signed in
-//   startListening();
