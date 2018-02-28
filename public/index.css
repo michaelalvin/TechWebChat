@@ -10,13 +10,27 @@
     #username, #post, #email, #password {
       display: block;
       margin: 5px 0px;
+
+      background-color: transparent;
+      color: #2771e8;
+      outline: none;
+      outline-style: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: solid #eeeeee 1px;
+      padding: 0px 10px;
+      height:25px;
+      width:300px;
     }
 
     #postbtn {
       padding: 0.5em 1em;
-      background-color: #50b1ff;
+      background-color: #f95e71;
       border: none;
       color: #FFF;
+      background-image: url(http://th07.deviantart.net/fs70/150/i/2013/012/c/6/rock_01_png___by_alzstock-d5r84up.png);
+      background-repeat: no-repeat;
     }
 
     #loginbtn, #logoutbtn, #signupbtn {
