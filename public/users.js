@@ -107,8 +107,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     var uid = user.uid;
     var providerData = user.providerData;
     emailaddress = user.email;
-    alert("Welcome " + email);
-    window.location.href = "users.html";
     // ...
     startListening();
   } else {
