@@ -30,40 +30,6 @@ function submit() {
     }
 }
 
-function login() {
-    var email = emailText.value;
-    var pw = passwordText.value;
-
-    firebase.auth().signInWithEmailAndPassword(email, pw).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
-        alert(errorMessage);
-    });
-}
-
-function signup() {
-    var email = emailText.value;
-    var pw = passwordText.value;
-
-    firebase.auth().createUserWithEmailAndPassword(email, pw).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
-        alert(errorMessage);
-    });
-}
-
-function logout() {
-    firebase.auth().signOut().then(function() {
-        console.log('Signed Out');
-    }, function(error) {
-        console.error('Sign Out Error', error);
-    });
-}
-
 /** Function to add a data listener **/
 var startListening = function() {
 	if(typeof emailaddress !== "undefined"){
